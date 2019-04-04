@@ -88,12 +88,34 @@ function makeTableRow(){
 makeTableRow();
 
 function makeFooterRow(){
-    //Total Row
-    var table = document.getElementById('sales');  
+    //anchor
+    var table = document.getElementById('sales');
+    //create elements - next 2 lines  
     var salesRow = document.createElement('tr');
     var salesCell = document.createElement('td');
-    salesCell.textContent = "Hourly Total";
+    //assign text
+    salesCell.textContent = 'Hourly Total';
+    //put value into element
     salesRow.appendChild(salesCell);
+    var grandTotal = 0;
+    for (let index = 0; index < hours.length; index++) {
+    var salesCell2 = document.createElement('td');
+    var runningTotal = 0;
+        for (let index2 = 0; index2 < locations.length; index2++) {
+            runningTotal += locations[index2].hourlyCookies[index];
+            
+
+        }
+        salesCell2.textContent = runningTotal;
+        //grand total is sum of all daily totals
+        grandTotal += runningTotal;
+
+    salesRow.appendChild(salesCell2);
+    };
+    var salesCell3 = document.createElement('td');
+    salesCell3.textContent = grandTotal;
+    salesRow.appendChild(salesCell3);
+    //put new element into table
     table.appendChild(salesRow);
 
 };

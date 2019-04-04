@@ -1,8 +1,7 @@
-td {
-    border-style: solid;
-    border-color: blueviolet;
-}
-
 body{
     background-color: salmon;
+}
+
+td{
+    border-style: dashed;
 }

@@ -8,7 +8,25 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
-    <table id="sales"></table>
+    <form id="store-form">
+        <fieldset>
+            <legend>Store Submisson Form</legend>
+            <label for="storeName">Store Name:</label>
+            <input name="storeName" type="text" size="15" placeholder="Ex: 1st and Pike" required>
+
+            <label for="minCust">Minimum Customers:</label>
+            <input name="minCust" type="text" size="5" placeholder="1-99" required>
+
+            <label for="maxCust">Maximum Customers:</label>
+            <input name="maxCust" type="text" size="5" placeholder="1-99" required>
+
+            <label for="avgCust">Average Customers Per Hour:</label>
+            <input name="avgCust" type="text" size="5" placeholder="1-99" required>
+
+            <button label="submit">Submit</button>
+        </fieldset>
+    </form>
+    <table id="sales">Sales</table>
     <script src="app.js"></script>
 </body>
 </html>
